@@ -91,15 +91,46 @@ class SoftwareEngineer(Employee):
   def __init__(self, name, age, salary, level):
     super().__init__(name, age, salary)
     self.level = level
+
+  # To override the debug function we can do this
+  # uncomment to use override function
+  # def work(self):
+  #   print(f"{self.name} is coding...")
+    
+  
+    
+  
+  #This function is only specific to this base class
+  #Extends the functionality of the base class
+    
+  def debug(self):
+    print(f"{self.name} is debugging...")
+      
   
 
 class Designer(Employee):
-  pass
+
+  # To override the debug function we can do this
+  # uncomment to use override function
+  # def work(self):
+  #   print(f"{self.name} is designing...")
+  
+  #This function is only specific to this base class
+    
+  def draw(self):
+   print(f"{self.name} is drawing...")
   
 
 se = SoftwareEngineer("Max", 25, 6000, "Junior")
 se.work()
-print(se.level)
+print(se.level) 
+se.debug()
+
+
 
 d = Designer("Philip", 27, 7000)
 d.work()
+d.draw()
+
+# Polymorphism
+
